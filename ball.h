@@ -9,7 +9,7 @@ class ball : public sf::Drawable
 private:
     CircleShape shape;
     const float ballRadius{ 10.0f };
-    const float ballVelocity{ 3.0f };
+    const float ballVelocity{ 5.0f };
     Vector2f velocity{ ballVelocity, ballVelocity };
     void draw(RenderTarget& target, RenderStates state) const override;
 public:
@@ -17,6 +17,13 @@ public:
     ~ball() = default;
 
     void update();
+
+    Vector2f getPosition();
+
+    void moveUp();
+    void moveDown();
+    void moveRight();
+    void moveLeft();
 
     float left();
     float right();

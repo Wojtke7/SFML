@@ -40,6 +40,30 @@ void ball::update()
     }
 }
 
+Vector2f ball::getPosition()
+{
+    return shape.getPosition();
+}
+
+void ball::moveUp()
+{
+    this->velocity.y = -ballVelocity;
+}
+
+void ball::moveDown()
+{
+    this->velocity.y = ballVelocity;
+}
+
+void ball::moveRight()
+{
+    this->velocity.x = ballVelocity;
+}
+
+void ball::moveLeft()
+{
+    this->velocity.x = -ballVelocity;
+}
 
 float ball::left()
 {
